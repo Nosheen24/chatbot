@@ -1,0 +1,72 @@
+[
+    {
+        "response_type": "greeting",
+        "user_input": ["hello", "hi", "hey"],
+        "bot_response": "Hey there!",
+        "required_words": []
+    },
+    {
+        "response_type": "greeting",
+        "user_input": ["see you", "goodbye", "bye","byee"],
+        "bot_response": "See you later!",
+        "required_words": []
+    },
+    {
+        "response_type": "greeting",
+        "user_input": ["nice", "to", "meet", "you"],
+        "bot_response": "The pleasure is all mine!",
+        "required_words": ["nice", "meet", "you"]
+    },
+    {
+        "response_type": "question",
+        "user_input": ["how", "to", "learn", "code", "coding", "apps"],
+        "bot_response": "Start by typing: 'How to learn coding' on Google.",
+        "required_words": ["learn", "code"]
+    },
+    {
+        "response_type": "question",
+        "user_input": ["refund", "how", "can", "I", "get"],
+        "bot_response": "We don't offer refunds for free education.",
+        "required_words": ["refund", "i"]
+    },
+    {
+        "response_type": "question",
+        "user_input": ["how", "are", "you"],
+        "bot_response": "I'm great! Thanks for asking.",
+        "required_words": ["how", "are", "you"]
+    },
+    {
+        "response_type": "question",
+        "user_input": ["what", "is", "your", "name"],
+        "bot_response": "I dont have a name, I am a friendly bot created to assist you!",
+        "required_words": ["what", "your", "name"]
+    },
+    {
+        "response_type": "question",
+        "user_input": ["what", "time", "is", "it"],
+        "bot_response": "I'm not sure about the exact time, but it's always a good time to learn something new!",
+        "required_words": ["what", "time"]
+    },
+    {
+        "response_type": "question",
+        "user_input": ["tell", "me", "a", "joke"],
+        "bot_response": "Why don't scientists trust atoms? Because they make up everything!",
+        "required_words": ["tell", "joke"]
+    },
+    {
+        "response_type": "question",
+        "user_input": ["what", "is", "the", "weather", "like"],
+        "bot_response": "I'm not equipped to check the weather, but I hope it's nice where you are!",
+        "required_words": ["what", "weather"]
+    },
+
+    {
+        "response_type": "question",
+        "user_input": ["how", "can", "i", "learn", "code"],
+        "bot_response": "You can start learning code by taking online courses, reading programming books, and practicing regularly.",
+        "required_words": ["how", "can", "learn", "code"]
+    }
+
+
+
+]
