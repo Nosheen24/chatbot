@@ -96,9 +96,13 @@ if __name__ == "__main__":
     search_term = input("Enter the search term: ")
     start_dir = input("Enter the directory to search in: ")
 
-
+    x=input("Search item is folder or file? yes/no :")
+    if(x=='no'or x=='yes'):
+        is_folder = True
+    else:
+        is_folder=False
     disable_case = True
-    is_folder = False
+
     show_bar = True
 
     searcher = FileSearch()
