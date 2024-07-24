@@ -1,10 +1,11 @@
 import os
 from pathlib import Path
 
+# Specify the directory you want to organize
 TARGET_DIR = r'E:\Semester 4\pythonProject\Task Automation\test_folder'
 
 def organize_junk(target_directory):
-    os.chdir(target_directory)
+    os.chdir(target_directory)  # Change to the target directory
 
     for entry in os.scandir():
         if entry.is_dir():
@@ -23,37 +24,25 @@ def organize_junk(target_directory):
             directory_path.mkdir(exist_ok=True)
             file_path.rename(directory_path.joinpath(file_path))
 
-        for dir in os.scandir():
+    for dir in os.scandir():
+        if dir.is_dir():
             try:
                 os.rmdir(dir)
             except Exception:
                 pass
 
-
 DIRECTORIES = {
-
     "Webpages": [".html5", ".html", ".htm", ".xhtml", ".aspx", ".php"],
-
-    "Images": [".jpg", ".jpeg", ".png", ".tiff", ".gif", ".bmp", ".bpg", ".svg",
-               ".heif", ".psd"],
-
-    "Videos": [".avi", ".mp4", ".flv", ".mkv", ".wmv", ".mov", ".webm", ".vob",
-               ".3gp", ".mpeg", ".mpg", ".qt"],
-
-    "Docs": [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".epub",
-             ".opus", ".txt", ".in", ".out", ".xml"],
-
+    "Images": [".jpg", ".jpeg", ".png", ".tiff", ".gif", ".bmp", ".bpg", ".svg", ".heif", ".psd"],
+    "Videos": [".avi", ".mp4", ".flv", ".mkv", ".wmv", ".mov", ".webm", ".vob", ".3gp", ".mpeg", ".mpg", ".qt"],
+    "Docs": [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".epub", ".opus", ".txt", ".in", ".out", ".xml"],
     "Archive": [".rar", ".zip", ".7z"],
-
-    "Audio": [".mp3", ".aac", ".ogg", ".m4a", ".wav", ".aa", ".dvf", ".m4b",
-              ".m4p", ".msv", ".oga", ".raw", ".vox"]
-
+    "Audio": [".mp3", ".aac", ".ogg", ".m4a", ".wav", ".aa", ".dvf", ".m4b", ".m4p", ".msv", ".oga", ".raw", ".vox"]
 }
 
 FILE_FORMATS = {file_format: directory
                 for directory, file_formats in DIRECTORIES.items()
                 for file_format in file_formats}
-
 
 if __name__ == "__main__":
     organize_junk(TARGET_DIR)
